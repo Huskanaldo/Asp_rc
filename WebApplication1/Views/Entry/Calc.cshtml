@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using WebApplication1.Models;
+
+
+<center>
+    <form asp-controller="Calc" method="post">
+        <input type="text" readonly id="op" name="op" value="@Context.Session.GetString("op")">
+        <br>
+
+        <br />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="1" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="2" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="3" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="add" value="+" formaction="/Entry/Add" />
+        <br />
+
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="4" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="5" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="6" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="Sub" value="-" formaction="/Entry/Sub" />
+        <br />
+
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="7" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="8" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="9" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="Multiply" value="*" formaction="/Entry/Multiply" />
+        <br />
+
+        <input style="height:35px; width:35px;" type="submit" name="clear" value="C" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="digit" value="0" formaction="/Entry/Operand" />
+        <input style="height:35px; width:35px;" type="submit" name="result" value="=" formaction="/Entry/Result" />
+        <input style="height:35px; width:35px;" type="submit" name="Division" value="/" formaction="/Entry/Division" />
+        
+
+
+      <input style="height:35px; width:35px;" type="submit" name="Division" value="√" formaction="/Entry/qua" />
+      <input style="height:35px; width:35px;" type="submit" name="Division" value="1/x" formaction="/Entry/fra" />
+        <input style="height:35px; width:35px;" type="submit" name="Division" value="+/-" formaction="/Entry/Mm" />
+        <input style="height:35px; width:35px;" type="submit" name="Division" value="^" formaction="/Entry/Sob" />
+
+        <br />
+    </form>
+</center>
